@@ -110,7 +110,7 @@ while not rospy.is_shutdown():
     gps_message.header.stamp.nsecs = CurrentTime[1]
     gps_message.latitude = LatitudeSigned
     gps_message.longitude = LongitudeSigned
-    gps_message.altitude = 0.0  # Set if available
+    gps_message.altitude = float(gpggaSplit[9])  # Set if available
     gps_message.utm_easting = utm_format[0]
     gps_message.utm_northing = utm_format[1]
     gps_message.zone = utm_format[2]

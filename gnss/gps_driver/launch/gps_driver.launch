@@ -3,7 +3,7 @@
     <arg name="port" default="/dev/ttyUSB0" />
 
     <!-- Launch the gps_driver node with the specified serial port argument -->
-    <node name="gps_driver" pkg="gps_driver" type="driver.py" output="screen">
+    <node name="gps_driver" pkg="gps_driver" type="driver1.py" output="screen">
         <!-- Pass the serial port as a parameter to the node -->
         <param name="serial_port" value="$(arg port)" />
     </node>
