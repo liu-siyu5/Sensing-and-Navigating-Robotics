@@ -1,0 +1,10 @@
+<launch>
+<arg name="port" default="/dev/ttyUSB0"/>
+<arg name="baud" default="115200"/>
+<arg name="sample" default="1.0"/>
+<node pkg="vn_driver" type= "driver.py" name="imu_data_publisher" output="screen" launch-prefix="python3">
+    <param name="port" type="string" value="$(arg port)"/>
+    <param name="baudrate" type="int" value="$(arg baud)"/>
+    <param name="sampling_rate" type="double" value="$(arg sample)"/>
+</node>
+</launch>
